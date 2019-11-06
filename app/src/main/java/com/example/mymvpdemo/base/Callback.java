@@ -1,7 +1,7 @@
-package com.example.mymvpdemo.mvp.callback;
+package com.example.mymvpdemo.base;
 
 /**
- * model给presenter返回数据的回调接口
+ * 获取数据的回调接口
  * @param <T>
  */
 public interface Callback<T> {
