@@ -5,12 +5,12 @@ import com.example.mymvpdemo.base.Callback;
 import com.example.mymvpdemo.main.contract.MainContract;
 import com.example.mymvpdemo.main.model.MainModel;
 
-public class MainPresenter implements MainContract.MainPresenter {
+public class MainPresenterImpl implements MainContract.MainPresenter {
 
     private MainContract.MainView view;
     private MainModel model;
 
-    public MainPresenter(MainContract.MainView view) {
+    public MainPresenterImpl(MainContract.MainView view) {
         this.view = view;
         model = new MainModel();
     }

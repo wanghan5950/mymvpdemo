@@ -8,11 +8,11 @@ import android.widget.TextView;
 import com.example.mymvpdemo.R;
 import com.example.mymvpdemo.entity.MainResult;
 import com.example.mymvpdemo.main.contract.MainContract;
-import com.example.mymvpdemo.main.presenter.MainPresenter;
+import com.example.mymvpdemo.main.presenter.MainPresenterImpl;
 
 public class MainActivity extends AppCompatActivity implements MainContract.MainView {
 
-    private MainPresenter presenter;
+    private MainContract.MainPresenter presenter;
     private TextView mainText;
     private Button btnRequest;
 
@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity implements MainContract.Main
         mainText = findViewById(R.id.main_text);
         btnRequest = findViewById(R.id.btn_request);
 
-        presenter = new MainPresenter(this);
+        presenter = new MainPresenterImpl(this);
 
         btnRequest.setOnClickListener(v -> presenter.fetchData());
     }
